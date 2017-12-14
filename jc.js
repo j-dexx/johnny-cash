@@ -9,8 +9,6 @@ function log(s){console.log(s)}
 
 $(document).ready(function() {
 
-    if ($.browser.msie) { alert("Using Internet Explorer? Johnny requires Chrome/Firefox/Safari to play audio. (sorry!)");}
-
     var track;
     var lastPin = false;
 
@@ -153,7 +151,7 @@ function initialize() {
 
     map = new google.maps.Map(document.getElementById('map'), myOptions);
 
-    $.getJSON('america_keyed.json', function(data) {
+  $.getJSON('america_keyed.json', function(data) {
         MM.places = data;
     });
 }
